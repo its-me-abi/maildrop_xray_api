@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<style>
+    #log {
+        background: #f0f0f0;
+        padding: 10px;
+        font-family: monospace;
+        height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+    }
+</style>
+<body>
+
+<h2>messages</h2>
+<div id="log"></div>
+
+<script type="module">
+    import { test } from './maildrop_test.js';
+    document.getElementById('run').addEventListener('click', () => {
+        test();
+    })
+    const originalLog = console.log;
+    console.log = function (...args) {
+        originalLog.apply(console, args);
+        const logDiv = document.getElementById('log');
+        logDiv.innerHTML += args + '</br></br>';
+    };
+</script>
+<button type="button" id="run" align="center">
+    view messages
+</button>
+</body>
+</html>
