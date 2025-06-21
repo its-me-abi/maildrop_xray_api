@@ -64,7 +64,7 @@ export class maildrop_api {
     get_last_mail(){
             const inbox = this.get_all_mail_ids();
             if (inbox && inbox.length > 0) {
-                const lastMessage = inbox[inbox.length - 1]; // Get the last message
+                const lastMessage = inbox[0]; // Get the last message
                 return lastMessage;
             }
     }
