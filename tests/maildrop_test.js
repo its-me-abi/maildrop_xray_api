@@ -1,6 +1,6 @@
 import { maildrop_api } from '../maildrop.js';
 // this is first time iam using javascript code seems to be ugly
-class Testclass {
+export class Testclass {
     maildrop_api = new maildrop_api("shpytest111")
     show_all_messages(){
         var ids = this.maildrop_api.get_all_mail_ids()
