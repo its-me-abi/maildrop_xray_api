@@ -2,7 +2,6 @@ import { maildrop_api } from '../maildrop.js';
 // this is first time iam using javascript code seems to be ugly
 class Testclass {
     maildrop_api = new maildrop_api("shpytest111")
-
     show_all_messages(){
         var ids = this.maildrop_api.get_all_mail_ids()
         console.log("last message = ",this.maildrop_api.get_last_mail().id)
@@ -13,9 +12,4 @@ class Testclass {
         }
     }
 
-}
-
-export function test(){
-    var tst = new Testclass();
-    tst.show_all_messages();
 }
