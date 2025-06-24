@@ -20,9 +20,10 @@
 <div id="log"></div>
 
 <script type="module">
-    import { test } from './maildrop_test.js';
+    import { Testclass } from './maildrop_test.js';
     document.getElementById('run').addEventListener('click', () => {
-        test();
+        var tst = new Testclass();
+        tst.show_all_messages();
     })
     const originalLog = console.log;
     console.log = function (...args) {
