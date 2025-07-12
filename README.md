@@ -88,6 +88,7 @@ Returns the first hyperlink URL found in the email’s HTML body (by message ID)
 
 ## Technical notes
 
+  this is my first javascript project with oop.
 - Uses synchronous XMLHttpRequest – suitable for browser use in trusted contexts.
 - Relies on the GraphQL API of maildrop.cc.
 - Extracts the first `<a>` link from the HTML part of the message.
